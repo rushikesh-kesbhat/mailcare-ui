@@ -1,0 +1,25 @@
+mat-toolbar{
+    position: relative;
+    z-index: 5;
+}
+mat-sidenav-container {
+    height: calc(100vh - 64px);
+  }
+.content{
+    padding: 24px;
+}
+mat-sidenav,
+mat-sidenav-content {
+  transition: all 500ms ease-in-out;
+}
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .custom-sidenav {
+    width: 250px; // Adjust as needed
+    background: white; // Background color of the sidenav
+    border-right: 2px solid rgba(128, 128, 128, 0.5); // Light gray right border
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); // Optional: lighter shadow for depth
+  }
+  

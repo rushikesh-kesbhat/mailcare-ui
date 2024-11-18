@@ -1,0 +1,39 @@
+<p-toast></p-toast>
+<h2 mat-dialog-title>Add New contact</h2>
+<mat-dialog-content>
+  <form [formGroup]="listForm" (ngSubmit)="submit()">
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" required />
+      <div *ngIf="listForm.get('listName')?.invalid && (listForm.get('email')?.touched || listForm.get('email')?.dirty)">
+        <small style="color: red;">Email Id is required.</small>
+      </div>
+    </div>
+    <div>
+        <label for="firstName">First Name:</label>
+        <textarea id="firstName" formControlName="firstName"></textarea>
+        <div *ngIf="listForm.get('firstName')?.invalid && (listForm.get('firstName')?.touched || listForm.get('firstName')?.dirty)">
+          <!-- <small style="color: red;">First Name  is required.</small> -->
+        </div>
+    </div>
+    <div>
+        <label for="lastName">Last Name:</label>
+        <textarea id="lastName" formControlName="lastName"></textarea>
+        <div *ngIf="listForm.get('lastName')?.invalid && (listForm.get('lastName')?.touched || listForm.get('lastName')?.dirty)">
+          <!-- <small style="color: red;">First Name  is required.</small> -->
+        </div>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" rows="3" ></textarea>
+      <div *ngIf="listForm.get('description')?.invalid && (listForm.get('description')?.touched || listForm.get('description')?.dirty)">
+        <small style="color: red;">Description is required.</small>
+      </div>
+    </div>
+
+    <mat-dialog-actions>
+      <button mat-button (click)="dialogRef.close()">Cancel</button>
+      <button mat-button color="primary" type="submit" [disabled]="listForm.invalid">Save</button>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

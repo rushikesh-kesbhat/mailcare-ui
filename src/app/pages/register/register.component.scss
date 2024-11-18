@@ -1,0 +1,31 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for centering */
+  }
+  
+  .login-content {
+    width: 100%;
+    max-width: 500px; /* Increase max width for the form */
+    margin: 20px; /* Margin around the form */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .mat-form-field {
+    width: 100%; /* Full width for form fields */
+    margin-bottom: 16px; /* Space between fields */
+  }
+  
+  .socialMediaFlex {
+    display: flex;
+    justify-content: center; /* Center the submit button */
+    margin-top: 20px; /* Space above the button */
+  }
+  .Input_Div{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  

@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; // Prevent scrolling
+    background-color: #f5f5f5; // Light background color for contrast
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // Full viewport height
+    padding: 16px; // Add some padding for smaller screens
+  }
+  
+  .form-info-box {
+    display: flex;
+    width: 100%; // Full width for smaller screens
+    max-width: 800px; // Max width for larger screens
+    height: 400px; // Fixed height
+    background-color: white; // White background for the box
+    border-radius: 8px; // Rounded corners
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Subtle shadow
+    overflow: hidden; // Prevent overflow
+  }
+  
+  form {
+    flex: 1; // Take equal space
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    height: 100%; // Ensure form takes full height
+  
+    mat-form-field {
+      width: 100%;
+      margin-bottom: 16px;
+  
+      input {
+        text-align: center; // Center align text
+      }
+  
+      .mat-form-field-outline {
+        border-color: rgba(0, 0, 0, 0.23);
+        border-radius: 4px;
+      }
+  
+      .mat-form-field-outline:focus {
+        border-color: #6200ee; // Focus color
+      }
+  
+      .mat-form-field-label {
+        color: rgba(0, 0, 0, 0.6); // Label color
+      }
+  
+      &:focus-within .mat-form-field-label {
+        color: #6200ee; // Label color on focus
+      }
+  
+      mat-icon {
+        color: rgba(0, 0, 0, 0.54);
+      }
+  
+      mat-error {
+        color: #d50000;
+      }
+    }
+  
+    .button-container {
+      display: flex;
+      justify-content: space-between; // Space between buttons
+      width: 100%; // Full width for buttons
+    }
+  }
+  
+  .info-container {
+    flex: 1; // Take equal space
+    padding: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1); // Light border to separate
+    display: flex;
+    flex-direction: column; // Stack text vertically
+  
+    h2 {
+      margin-bottom: 16px;
+    }
+  
+    p {
+      margin-bottom: 8px; // Space between paragraphs
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 600px) {
+    .form-info-box {
+      flex-direction: column; // Stack on smaller screens
+      height: auto; // Allow height to adjust on smaller screens
+    }
+  
+    .info-container {
+      border-left: none; // Remove left border on smaller screens
+    }
+  }
+  .p-toast {
+    position: fixed; /* or absolute */
+    z-index: 9999; /* Ensure this is higher than other components */
+}
+  

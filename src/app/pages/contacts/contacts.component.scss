@@ -1,0 +1,135 @@
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .button-container button {
+    margin-right: 15px; /* Space between buttons */
+    padding: 12px 20px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    background-color: white; /* White background */
+    color: #1976d2; /* Blue text color */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Elevated shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    border: none; /* Remove border */
+  }
+  
+  .button-container button .material-icons {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px; /* Icon size */
+  }
+  
+  .button-container button:hover {
+    background-color: #e3f2fd; /* Light blue background on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  .button-container button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.6); /* Glow effect on focus */
+  }
+  
+  
+  .mid-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align cards to the start */
+    margin: 20px; /* Margin around the container */
+    gap: 20px; /* Space between cards */
+  }
+  
+  .contact-card {
+    flex: 0 0 calc(25% - 20px); /* 4 items per row with margin adjustment */
+    background: #fff; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.2s; /* Smooth hover effect */
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.02); /* Scale effect on hover */
+  }
+  
+  .mat-card-header {
+    background-color: #f5f5f5; /* Light gray background for the header */
+    padding: 16px; /* Padding for header */
+    border-bottom: 1px solid #e0e0e0; /* Light bottom border */
+  }
+  
+  .mat-card-title {
+    font-weight: bold; /* Bold title */
+    font-size: 1.25em; /* Font size for the title */
+  }
+  
+  .mat-card-content {
+    padding: 16px; /* Padding for content */
+  }
+  
+  .description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em; /* Set line height */
+    max-height: 3em; /* Max height for two lines */
+    color: #666; /* Slightly darker text for description */
+  }
+  
+  .mat-card-footer {
+    padding: 8px 16px; /* Padding for footer */
+    background-color: #f5f5f5; /* Light gray background for the footer */
+    border-top: 1px solid #e0e0e0; /* Light top border */
+    font-size: 0.9em; /* Smaller font size */
+    color: #888; /* Gray color for footer text */
+  }
+  @media (max-width: 768px) {
+    .contact-card {
+      flex: 0 0 calc(50% - 20px); /* 2 items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-card {
+      flex: 0 0 100%; /* 1 item per row on extra small screens */
+    }
+  }
+  .contact-card {
+    position: relative; /* Set the card to relative positioning */
+  }
+  
+  .delete-icon {
+    position: absolute; /* Position the icon absolutely */
+    top: 8px;          /* Distance from the top */
+    right: 8px;        /* Distance from the right */
+    cursor: pointer;   /* Change cursor to pointer on hover */
+    color: #f44336;    /* Color for the delete icon (red) */
+    font-size: 24px;   /* Size of the icon */
+    z-index: 1;     
+  }
+  .delete-icon:hover {
+    color: #d32f2f; /* Darker red on hover */
+  }
+  .custom-dialog-container {
+    border: 2px solid #1976d2; /* Customize border */
+    border-radius: 0; /* Square corners */
+    background-color: white; /* Background color */
+    padding: 20px; /* Optional padding */
+    width: 700px; /* Set width */
+    height: 500px; /* Set height */
+    max-width: none; /* Disable max-width */
+    max-height: none; /* Disable max-height */
+    box-sizing: border-box; /* Include padding and border in dimensions */
+  }
+
+  
+
+
+
+  
+    

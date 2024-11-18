@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="form-info-box">
+        <div class="info-container">
+            <h2>Information</h2>
+            <p>
+              Please enter your email and app password. 
+              Make sure to follow the password guidelines: at least 6 characters.
+            </p>
+            <p>
+              If you have any issues, feel free to contact support.
+            </p>
+          </div>
+      <form [formGroup]="loginForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <mat-icon matPrefix>mail</mat-icon>
+          <input matInput formControlName="email" required email />
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            Email is required.
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Please enter a valid email.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>App Password</mat-label>
+          <mat-icon matPrefix>key</mat-icon>
+          <input matInput formControlName="appPassword" required minlength="6" />
+          <mat-error *ngIf="loginForm.get('appPassword')?.hasError('required')">
+            Password is required.
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('appPassword')?.hasError('minlength')">
+            Password must be at least 6 characters long.
+          </mat-error>
+        </mat-form-field>
+  
+        <div class="button-container">
+          <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" [disabled]="loginForm.invalid">Save</button>
+          <button mat-raised-button color="accent" (click)="validate()">Validate</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+ 
+  

@@ -1,0 +1,25 @@
+<div class="button-container">
+    <button mat-raised-button (click)="createNewList()">
+      <span class="material-icons" aria-hidden="true">add</span>
+      Create New List
+    </button>
+  </div>
+  
+
+  <div class="mid-list">
+    <mat-card *ngFor="let list of contactList" class="contact-card" (click)="openListDialog(list.id)">
+      <mat-icon class="delete-icon">delete</mat-icon>
+      <mat-card-header>
+        <mat-card-title>{{ list.listName }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="description">{{ list.description }}</p>
+      </mat-card-content>
+      <mat-card-footer>
+        <span>Contacts: 10</span>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  
+  
+  

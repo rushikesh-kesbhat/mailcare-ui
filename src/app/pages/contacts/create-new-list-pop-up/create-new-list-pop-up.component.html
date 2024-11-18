@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Add New List</h2>
+<mat-dialog-content>
+  <form [formGroup]="listForm" (ngSubmit)="submit()">
+    <div>
+      <label for="listName">List Name:</label>
+      <input id="listName" formControlName="listName" required />
+      <div *ngIf="listForm.get('listName')?.invalid && (listForm.get('listName')?.touched || listForm.get('listName')?.dirty)">
+        <small style="color: red;">List Name is required.</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" rows="3" required></textarea>
+      <div *ngIf="listForm.get('description')?.invalid && (listForm.get('description')?.touched || listForm.get('description')?.dirty)">
+        <small style="color: red;">Description is required.</small>
+      </div>
+    </div>
+
+    <mat-dialog-actions>
+      <button mat-button (click)="dialogRef.close()">Cancel</button>
+      <button mat-button color="primary" type="submit" [disabled]="listForm.invalid">Save</button>
+    </mat-dialog-actions>
+  </form>
+</mat-dialog-content>

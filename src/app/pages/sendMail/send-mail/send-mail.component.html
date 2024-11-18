@@ -1,0 +1,37 @@
+<as-split [useTransition]="true" unit="percent">
+  <!-- Left Panel with CKEditor -->
+  <as-split-area [size]="leftPanelSize">
+    <div class="left-panel">
+      <h3>Subject</h3>
+      <input [(ngModel)]="email.subject" placeholder="Enter subject" class="subject-input" />
+
+      <!-- CKEditor for the body content, only rendered after CKEditor is ready -->
+      <div cdkDropList id="drop-target" class="quill-editor-container" (cdkDropListDropped)="drop($event)">
+        <ckeditor 
+          *ngIf="isEditorReady"
+          [(ngModel)]="email.body" 
+          [config]="editorConfig" 
+          placeholder="Write your email here..." 
+        ></ckeditor>
+      </div>
+    </div>
+  </as-split-area>
+
+  <!-- Right Panel with Draggable Templates -->
+  <as-split-area [size]="100 - leftPanelSize">
+    <div class="right-panel">
+      <h3>Available Templates</h3>
+
+      <!-- Drag-and-drop Templates -->
+      <div cdkDropList class="templates">
+        <div *ngFor="let template of templates" 
+             class="template-item" 
+             cdkDrag 
+             [cdkDragData]="template" 
+             (cdkDragDropped)="drop($event)">
+          {{ template.name }}
+        </div>
+      </div>
+    </div>
+  </as-split-area>
+</as-split>

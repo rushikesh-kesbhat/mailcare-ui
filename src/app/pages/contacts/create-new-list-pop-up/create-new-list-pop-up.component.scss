@@ -1,0 +1,52 @@
+mat-dialog-content {
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+  }
+  
+  div {
+    margin-bottom: 16px; /* Space between fields */
+  }
+  
+  label {
+    display: block; /* Make the label take the full width */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold; /* Make the label bold for better visibility */
+  }
+  
+  input, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 8px; /* Padding for better look */
+    border: 1px solid #ccc; /* Simple border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Button styles */
+  mat-dialog-actions {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between buttons */
+  }
+  
+  button {
+    background-color: #1976d2; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px 16px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  button:hover {
+    background-color: #145a86; /* Darker blue on hover */
+  }
+  
+  button:disabled {
+    background-color: #e0e0e0; /* Light grey for disabled state */
+    color: #a0a0a0; /* Darker grey text for disabled state */
+    cursor: not-allowed; /* Not-allowed cursor for disabled state */
+  }
+  :host {
+    min-width: fit-content !important;
+    overflow-y: unset !important;
+  }
+  

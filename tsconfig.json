@@ -17,8 +17,10 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
-    "target": "ES2022",
+    // "target": "ES2022",
     "module": "ES2022",
+    "allowJs": true,
+    "target": "es2015",
     "lib": [
       "ES2022",
       "dom"
@@ -28,6 +30,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
   }
 }
